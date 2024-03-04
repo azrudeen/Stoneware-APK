@@ -1,0 +1,7 @@
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/filter_icon"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:height="24dp"
+    android:drawablePadding="8dp"
+    />
