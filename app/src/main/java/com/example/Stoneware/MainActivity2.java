@@ -1,4 +1,5 @@
-package com.example.myapplication4;
+package com.example.Stoneware;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,20 +10,75 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    private EditText firstNameEditText, lastNameEditText, emailEditText, passwordEditText;
-
-    private DatabaseHelper dbHelper;
+    EditText signupName, signupUsername, signupEmail, signupPassword;
+    Button SignupPage_Login_button;
+    Button signupButton;
+    FirebaseDatabase database;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        signupName = findViewById(R.id.Signup_name);
+        signupEmail = findViewById(R.id.Signup_email);
+        signupUsername = findViewById(R.id.Signup_username);
+        signupPassword = findViewById(R.id.Signup_password);
+        SignupPage_Login_button = findViewById(R.id.SignupPage_Login_button);
+        signupButton = findViewById(R.id.SignupPage_Signup_button);
+
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                database = FirebaseDatabase.getInstance();
+                reference = database.getReference("users");
+
+                String name = signupName.getText().toString();
+                String email = signupEmail.getText().toString();
+                String username = signupUsername.getText().toString();
+                String password = signupPassword.getText().toString();
+
+                HelperClass helperClass = new HelperClass(name, email, username, password);
+                reference.child(username).setValue(helperClass);
+
+                Toast.makeText(MainActivity2.this, "You have signup successfully!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        SignupPage_Login_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Initialize DatabaseHelper
-        dbHelper = new DatabaseHelper(this);
+   /*    dbHelper = new DatabaseHelper(this);
 
         // Initialize EditText fields
         firstNameEditText = findViewById(R.id.first_name_edit_text);
@@ -66,6 +122,6 @@ public class MainActivity2 extends AppCompatActivity {
         } else {
             // Signup failed
             Toast.makeText(this, "Signup failed!", Toast.LENGTH_SHORT).show();
-        }
-    }
-}
+        }*/
+
+

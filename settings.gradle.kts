@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Application4"
+rootProject.name = "Stoneware"
 include(":app")
  

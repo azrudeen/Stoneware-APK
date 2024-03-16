@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "253941599958",
+    "firebase_url": "https://myapplication4-ec6a7-default-rtdb.firebaseio.com",
+    "project_id": "myapplication4-ec6a7",
+    "storage_bucket": "myapplication4-ec6a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253941599958:android:7e71f5d4a671cb4ba44377",
+        "android_client_info": {
+          "package_name": "com.example.Stoneware"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcT-w1PlwJADuZ_d6NTknYWYSQxkMooXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253941599958:android:341313e906af45ffa44377",
+        "android_client_info": {
+          "package_name": "com.example.myapplication4"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcT-w1PlwJADuZ_d6NTknYWYSQxkMooXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

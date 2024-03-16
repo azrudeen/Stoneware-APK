@@ -1,13 +1,14 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.example.myapplication4"
+    namespace = "com.example.Stoneware"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.myapplication4"
+        applicationId = "com.example.Stoneware"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -39,6 +40,7 @@ dependencies {
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.activity:activity:1.8.2")
+    implementation("com.google.firebase:firebase-database:20.3.1")
     testImplementation("junit:junit:4.13.2")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.22")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22")
