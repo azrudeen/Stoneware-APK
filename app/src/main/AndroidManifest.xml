@@ -16,7 +16,7 @@
         android:theme="@style/Stoneware"
         tools:targetApi="31">
         <activity
-            android:name=".loading_screen_animation"
+            android:name=".loading_animation"
             android:exported="false" />
         <activity
             android:name=".HomePage"

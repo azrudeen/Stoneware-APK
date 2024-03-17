@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText loginUsername, loginPassword;
     Button LoginPage_Login_button;
- Button LoginPage_Signup_button;
+    Button LoginPage_Signup_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,13 @@ public class MainActivity extends AppCompatActivity {
                 if (!validateUsername() | !validatePassword()) {
 
                 } else {
-                    checkUser();
+                    // Display the loading screen
+                    startActivity(new Intent(MainActivity.this, loading_animation.class));
+                    // Check user credentials after a delay
+                    new android.os.Handler().postDelayed(
+                            () -> checkUser(),
+                            2000 // Delay for 2 second
+                    );
                 }
             }
         });
@@ -46,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         LoginPage_Signup_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( MainActivity.this, MainActivity2.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(intent);
             }
         });
@@ -64,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public Boolean validatePassword(){
+    public Boolean validatePassword() {
         String val = loginPassword.getText().toString();
         if (val.isEmpty()) {
             loginPassword.setError("Password cannot be empty");
@@ -75,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    public void checkUser(){
+    public void checkUser() {
         String userUsername = loginUsername.getText().toString().trim();
         String userPassword = loginPassword.getText().toString().trim();
 
@@ -87,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                if (snapshot.exists()){
+                if (snapshot.exists()) {
 
                     loginUsername.setError(null);
                     String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
