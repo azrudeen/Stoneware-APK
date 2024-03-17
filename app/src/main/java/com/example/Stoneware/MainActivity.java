@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                         String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
                         String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
 
-                        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                        Intent intent = new Intent(MainActivity.this, HomePage.class);
 
                         intent.putExtra("name", nameFromDB);
                         intent.putExtra("email", emailFromDB);
