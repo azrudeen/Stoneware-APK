@@ -1,167 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#D9D9D9"
     android:foregroundTint="#00CC1C1C"
     tools:context=".HomePage">
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="411dp"
-        android:layout_height="50dp"
-        android:background="#F34B4B"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <View
+            android:id="@+id/navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#F34B4B"/>
+
+        <ImageButton
+            android:id="@+id/menu_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="-411dp"
+            android:layout_marginTop="0dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/menu" />
+
+
+        <ImageButton
+            android:id="@+id/Home_icon"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/home_icon" />
+
+
+        <ImageButton
+            android:id="@+id/search_bar"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:layout_marginStart="100dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/search_4"/>
+
+
+        <ImageButton
+            android:id="@+id/Account_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:layout_marginStart="5dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/account_icon"/>
+    </LinearLayout>
+
+
+    <!-- GridLayout  -->
 
     <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="0dp"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        app:srcCompat="@drawable/menu" />
-
-
-    <ImageButton
-        android:id="@+id/imageButton9"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-
-        android:background="#00FFFFFF"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toTopOf="parent"
-
-        app:srcCompat="@drawable/home_icon" />
-
-
-    <ImageButton
-        android:id="@+id/search_bar"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:background="#00FFFFFF"
-        android:scaleType="fitXY"
-
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toStartOf="@+id/Account_icon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/search_4" />
-
-
-    <ImageButton
-        android:id="@+id/Account_icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:background="#00FFFFFF"
-        android:scaleType="fitXY"
-
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/account_icon" />
-
-    <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/home_image_button"
         android:layout_width="350dp"
         android:layout_height="200dp"
-        android:layout_marginStart="16dp"
+        android:gravity="center_horizontal"
         android:layout_marginTop="80dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/border_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:srcCompat="@drawable/pngtree_marble_natural_breccia" />
-
-
-    <!-- GridLayout -->
-
-
-    <Button
-        android:id="@+id/Popular"
-        android:layout_width="150dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="14dp"
-
-        android:background="@drawable/button_background"
-        android:text="Popular"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
-        app:layout_constraintVertical_bias="0.49" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="150dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="28dp"
-
-        android:background="@drawable/button_background"
-
-
-        android:text="@string/filter_button_text"
-        android:textAlignment="viewStart"
-        android:paddingStart="10dp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
-
-
-
+        android:background="@drawable/rounded_corners"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/pngtree_marble_natural_breccia"
         />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
 
+        <Button
+            android:id="@+id/Popular"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/button_background"
+            android:text="Popular"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/Filter"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/button_background"
+            android:text="@string/filter_button_text"
+            android:textAlignment="viewStart"
+            android:paddingStart="10dp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
 
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
-        android:layout_height="549dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:horizontalSpacing="16dp"
         android:numColumns="auto_fit"
-        android:stretchMode="columnWidth"
         android:verticalSpacing="16dp"
         app:columnCount="2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageButton5">
+        app:rowCount="11">
 
-        <!-- CardView -->
+        <!-- CardView 1 -->
         <androidx.cardview.widget.CardView
-
 
             android:layout_width="180dp"
             android:layout_height="140dp"
@@ -179,6 +143,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="85dp"
                 android:elevation="2dp"
                 android:text="tiles marblhes"
@@ -187,9 +152,9 @@
                 app:layout_row="0" />
 
             <TextView
-                android:layout_width="70dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="120dp"
                 android:elevation="2dp"
                 android:text="Price = Rs 45 sq"
@@ -201,26 +166,20 @@
             <!-- Button -->
             <Button
                 android:id="@+id/BuyNow"
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="85dp"
+                android:layout_marginStart="95dp"
                 android:layout_marginTop="110dp"
                 android:background="@drawable/button_background"
                 android:onClick="onButtonClick"
-                android:paddingBottom="1dp"
                 android:text="Book Now"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="12sp"
-                app:layout_column="0"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_row="0" />
+                android:textSize="10sp" />
 
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/1L"
                 android:layout_width="150dp"
                 android:layout_height="69dp"
                 android:layout_marginStart="15dp"
@@ -265,9 +224,9 @@
                 app:layout_row="0" />
 
             <TextView
-                android:layout_width="75dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="120dp"
                 android:elevation="2dp"
                 android:text="Price = Rs 85 sq"
@@ -295,7 +254,7 @@
                 app:layout_row="0" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/1R"
                 android:layout_width="150dp"
                 android:layout_height="69dp"
                 android:layout_marginStart="15dp"
@@ -310,9 +269,778 @@
 
         </androidx.cardview.widget.CardView>
 
+        <!-- CardView  3 -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="0"
+            app:layout_row="1">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+               />
+
+
+            <ImageView
+                android:id="@+id/2L"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView  4 -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="1"
+            app:layout_row="1">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/2R"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView  5 -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="0"
+            app:layout_row="3">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/3L"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView  7 -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="0"
+            app:layout_row="7">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/4L"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView  8 -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="1"
+            app:layout_row="7">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/4R"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView  6 -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="1"
+            app:layout_row="3">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/3R"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView  8L -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="0"
+            app:layout_row="8">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView  8R -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="1"
+            app:layout_row="8">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView  9L -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="0"
+            app:layout_row="9">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView  9R -->
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="1"
+            app:layout_row="9">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView  10L -->
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="0"
+            app:layout_row="10">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView  10R -->
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_column="1"
+            app:layout_row="10">
+
+            <!-- ImageView -->
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:elevation="2dp"
+                android:text="tiles marblhes"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:elevation="2dp"
+                android:text="Price = Rs 45 sq"
+                android:textSize="8sp" />
+
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/button_background"
+                android:onClick="onButtonClick"
+                android:paddingBottom="1dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="150dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corners"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/home_img1" />
+
+        </androidx.cardview.widget.CardView>
 
     </androidx.gridlayout.widget.GridLayout>
 
+</LinearLayout>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

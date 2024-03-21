@@ -38,13 +38,14 @@ public class MainActivity extends AppCompatActivity {
                 if (!validateUsername() | !validatePassword()) {
 
                 } else {
+                    checkUser();
                     // Display the loading screen
                     startActivity(new Intent(MainActivity.this, loading_animation.class));
                     // Check user credentials after a delay
                     new android.os.Handler().postDelayed(
                             () -> checkUser(),
-                            2000 // Delay for 2 second
-                    );
+                            8000
+                    );// Delay for 2 second
                 }
             }
         });
