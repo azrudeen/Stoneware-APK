@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/nav_drawer_home_icon"
+        android:id="@+id/nav_home"
+        android:title="Home"/>
+
+    <item
+        android:icon="@drawable/nav_drawer_tiles_icon"
+        android:id="@+id/nav_tiles"
+        android:title="Tiles"/>
+
+    <item
+        android:id="@+id/nav_granite"
+        android:title="Granite"/>
+
+    <item
+        android:id="@+id/nav_marble_stone"
+        android:title="White Marbles"/>
+
+    <item
+        android:id="@+id/nav_Italian_marbles"
+        android:title="Italian Marbles"/>
+
+    <item
+        android:id="@+id/nav_adhesives"
+        android:title="Adhesives"/>
+
+    <item
+        android:id="@+id/nav_sinks"
+        android:title="Sinks"/>
+
+    <item
+        android:id="@+id/nav_help_feedback"
+        android:title="Help and feeback"/>
+
+    <item
+        android:id="@+id/nav_settings"
+        android:title="Settings"
+
+        />
+
+
+
+</menu>
