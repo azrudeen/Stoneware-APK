@@ -11,30 +11,37 @@
         android:title="Tiles"/>
 
     <item
+        android:icon="@drawable/nav_drawer_granite_icon"
         android:id="@+id/nav_granite"
         android:title="Granite"/>
 
     <item
+        android:icon="@drawable/nav_drawer_italian_marble_icon"
         android:id="@+id/nav_marble_stone"
         android:title="White Marbles"/>
 
     <item
+        android:icon="@drawable/nav_drawer_white_marble_icon"
         android:id="@+id/nav_Italian_marbles"
         android:title="Italian Marbles"/>
 
     <item
+        android:icon="@drawable/nav_drawer_adhesvie_icon"
         android:id="@+id/nav_adhesives"
         android:title="Adhesives"/>
 
     <item
+        android:icon="@drawable/nav_drawer_sinks_icon"
         android:id="@+id/nav_sinks"
         android:title="Sinks"/>
 
     <item
+        android:icon="@drawable/nav_drawer_contact_us_icon"
         android:id="@+id/nav_help_feedback"
         android:title="Help and feeback"/>
 
     <item
+        android:icon="@drawable/nav_drawer_settings_icon"
         android:id="@+id/nav_settings"
         android:title="Settings"
 

@@ -27,7 +27,7 @@ public class HomePage extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerLayout);
         toolbar_menu_icon = findViewById(R.id.toolbar_menu_icon);
         navigationView = findViewById(R.id.navigationView);
-
+        navigationView.setItemIconTintList(null);
         toolbar_menu_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
