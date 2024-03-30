@@ -1,4 +1,4 @@
-Tilester Application APK.
+Stoneware Application APK.
 
 Title: Developing Tilester: My Android Studio Adventure.
 
