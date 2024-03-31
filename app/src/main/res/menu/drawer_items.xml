@@ -16,12 +16,12 @@
         android:title="Granite"/>
 
     <item
-        android:icon="@drawable/nav_drawer_italian_marble_icon"
+        android:icon="@drawable/nav_drawer_white_marble_icon"
         android:id="@+id/nav_marble_stone"
         android:title="White Marbles"/>
 
     <item
-        android:icon="@drawable/nav_drawer_white_marble_icon"
+        android:icon="@drawable/nav_drawer_italian_marble_icon"
         android:id="@+id/nav_Italian_marbles"
         android:title="Italian Marbles"/>
 

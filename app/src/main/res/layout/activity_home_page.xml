@@ -27,7 +27,7 @@
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/rounded_corners"
             android:gravity="center_horizontal"
             android:src="@drawable/pngtree_marble_natural_breccia" />
