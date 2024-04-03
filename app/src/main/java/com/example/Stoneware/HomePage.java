@@ -1,10 +1,15 @@
 package com.example.Stoneware;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,11 +18,24 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Objects;
+
 public class HomePage extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageButton toolbar_menu_icon;
     NavigationView navigationView;
+
+
+
+    public void showPopMenu(View View) {
+        PopupMenu popupMenu = new PopupMenu(this,View);
+        MenuInflater inflater = popupMenu.getMenuInflater();
+        inflater.inflate(R.menu.menu_profile, popupMenu.getMenu());
+        popupMenu.show();
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -10,11 +10,6 @@
     android:layout_gravity="center"
     tools:context=".MainActivity">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardElevation="20dp">
-    <!--    app:cardCornerRadius="8dp" -->
 
 
         <LinearLayout
@@ -51,7 +46,6 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-
                 android:background="@drawable/login_input_fields"
                 android:ems="10"
                 android:hint="password"
@@ -62,33 +56,38 @@
                 android:textColorHighlight="#B3ACAC"
                 android:textColorHint="#FFFFFF" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/LoginPage_Signup_button"
-                    android:layout_width="150dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="50dp"
-                    android:background="@drawable/login_page_corner_round2"
-                    android:text="Sign UP  ➔"
-                    android:textColor="#FFFFFF"
-                    app:strokeColor="#FFFFFF"
-                    app:strokeWidth="4dp" />
+
+
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" >
 
+
+                    <Button
+                        android:id="@+id/LoginPage_Signup_button"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="48dp"
+                        android:background="@drawable/login_page_corner_round2"
+
+                        android:text="Sign UP  ➔"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintEnd_toStartOf="@+id/LoginPage_Login_button"
+                        app:layout_constraintHorizontal_bias="0.12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="4dp" />
+
                     <Button
                         android:id="@+id/LoginPage_Login_button"
                         android:layout_width="150dp"
                         android:layout_height="50dp"
-                        android:layout_marginTop="50dp"
-                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="48dp"
+                        android:layout_marginEnd="16dp"
 
                         android:background="@drawable/login_page_corner_round"
                         android:clickable="true"
@@ -98,17 +97,13 @@
                         android:textColorLink="#00FFFFFF"
                         android:textSize="18dp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.494"
 
                         app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </LinearLayout>
 
 
         </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

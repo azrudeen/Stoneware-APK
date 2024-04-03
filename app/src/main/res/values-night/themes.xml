@@ -4,5 +4,17 @@
         <!-- Customize your dark theme here. -->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <item name="popupMenuStyle"> @style/popupBGStyle</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Stoneware" parent="Base.Theme.Stoneware" />
+
+    <style name="popupBGStyle" parent="Widget.MaterialComponents.PopupMenu">
+        <item name="android:popupBackground">@drawable/menu_background</item>
+
+
+
     </style>
 </resources>

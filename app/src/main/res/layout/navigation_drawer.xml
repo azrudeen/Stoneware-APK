@@ -12,6 +12,8 @@
 
 <include layout="@layout/activity_home_page" />
 
+
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
@@ -20,4 +22,7 @@
         app:headerLayout="@layout/drawer_header"
         android:layout_gravity="start"/>
 
+
+
 </androidx.drawerlayout.widget.DrawerLayout>
+
