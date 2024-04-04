@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/nav_bottom_marbles"
+        android:icon="@drawable/nav_drawer_white_marble_icon"
+        android:title="Marbles" />
+
+    <item
+        android:id="@+id/nav_bottom_tiles"
+        android:icon="@drawable/nav_drawer_tiles_icon"
+        android:title="Tiles" />
+
+    <item
+        android:id="@+id/nav_bottom_granite"
+        android:icon="@drawable/nav_drawer_granite_icon"
+        android:title="Granite" />
+
+    <item
+        android:id="@+id/nav_bottom_italian_marbles"
+        android:icon="@drawable/nav_drawer_italian_marble_icon"
+        android:title="Italian Marbles" />
+
+    <item
+        android:id="@+id/nav_bottom_orders"
+        android:icon="@drawable/menu_cart_icon"
+        android:title="Orders" />
+
+
+
+</menu>

@@ -12,6 +12,13 @@
     <include layout="@layout/toolbar_layout" />
 
 
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recyclerView"
+    android:layout_below="@+id/toolbar_layout"
+    android:layout_marginTop="80dp"
+    android:layout_gravity="center"/>
 
 <ScrollView
     android:layout_width="match_parent"
@@ -19,7 +26,6 @@
     android:layout_marginTop="80dp"
     android:orientation="vertical"
     android:layout_below="@+id/toolbar_layout">
-
 
         <androidx.gridlayout.widget.GridLayout
             android:id="@+id/gridLayout"
@@ -104,7 +110,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_background"
         android:onClick="onButtonClick"
-        android:text="Buy Now"
+        android:text="Add Cart"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="12sp"
