@@ -18,15 +18,15 @@
             android:src="@drawable/toolbar_menu_icon"/>
 
 
-        <ImageButton
-            android:id="@+id/Home_icon"
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:layout_marginStart="20dp"
-            android:background="#00FFFFFF"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/home_icon" />
+    <ImageButton
+        android:id="@+id/Home_icon"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/home_icon" />
 
 
     <ImageButton

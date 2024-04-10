@@ -2,5 +2,6 @@
     <string name="Stoneware">    Stoneware</string>
     <string name="filter_button_text">    Filter</string>
     <string name="User_name_input_text">    User name</string>
+    <string name="image_button">image button</string>
 
 </resources>
