@@ -43,19 +43,35 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+
+
                     <ImageView
                         android:id="@+id/imageView1L"
                         android:layout_width="match_parent"
                         android:layout_height="160dp"
+                        android:layout_marginBottom="15dp"
                         android:background="@drawable/rounded_corners"
                         android:elevation="2dp"
                         android:scaleType="fitXY"
                         app:layout_column="0"
+                        app:layout_constraintBottom_toTopOf="@+id/textView"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_row="0"
-                        app:srcCompat="@drawable/sink_images_inart_waterfall_kitchen_sink" />
+                        app:srcCompat="@drawable/sink_images_inart_waterfall_kitchen_sink"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:elevation="3dp"
+                        android:button="@drawable/selector_wishlist_item"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView1L"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
                     <!-- TextView -->
@@ -171,15 +187,17 @@
                     android:layout_marginTop="200dp"
                     android:background="@drawable/button_background"
                     android:onClick="onButtonClick"
-                    android:text="Book Now"
+                    android:text="ADD TO CART"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="10sp" />
+                    android:textSize="12dp" />
 
             </androidx.cardview.widget.CardView>
 
         </androidx.gridlayout.widget.GridLayout>
 
     </ScrollView>
+
+
 
 </RelativeLayout>
