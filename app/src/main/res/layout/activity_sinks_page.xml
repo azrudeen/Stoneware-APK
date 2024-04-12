@@ -18,12 +18,12 @@
         android:layout_height="match_parent"
         android:id="@+id/recyclerView"
         android:layout_below="@+id/toolbar_layout"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:layout_gravity="center"/>
 
 </RelativeLayout>
 
-
+<!-- hi -->
 
 
 
