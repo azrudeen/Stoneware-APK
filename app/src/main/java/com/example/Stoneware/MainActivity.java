@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     checkUser();
                     // Display the loading screen
-                    startActivity(new Intent(MainActivity.this, loading_animation.class));
+                    startActivity(new Intent(MainActivity.this, HomePage.class));
                     // Check user credentials after a delay
                     new android.os.Handler().postDelayed(
                             () -> checkUser(),

@@ -27,7 +27,7 @@
             android:numColumns="auto_fit"
             app:columnCount="1"
             app:orientation="vertical"
-            app:rowCount="10" >
+            app:rowCount="10">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -38,12 +38,9 @@
                 app:cardElevation="8dp"
                 app:layout_row="0">
 
-                <!-- ImageView -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-
 
                     <ImageView
                         android:id="@+id/imageView1L"
@@ -68,13 +65,11 @@
                         android:layout_height="24dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
-                        android:elevation="3dp"
+                        android:elevation="30dp"
                         android:button="@drawable/selector_wishlist_item"
                         app:layout_constraintEnd_toEndOf="@+id/imageView1L"
                         app:layout_constraintTop_toTopOf="parent" />
 
-
-                    <!-- TextView -->
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="237dp"
@@ -97,7 +92,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="10dp"
-
                         android:elevation="2dp"
                         android:text="Price = Rs 32,000.00"
                         android:textSize="8sp"
@@ -106,8 +100,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_row="0" />
 
-
-                    <!-- Button -->
                     <Button
                         android:id="@+id/BuyNow1L"
                         android:layout_width="120dp"
@@ -123,81 +115,14 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
 
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
 
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_margin="10dp"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="8dp"
-                app:layout_row="1">
-
-                <!-- ImageView -->
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="80dp"
-                    android:background="@drawable/rounded_corners"
-                    android:elevation="2dp"
-                    android:scaleType="fitXY"
-                    app:layout_column="0"
-                    app:layout_row="0"
-                    app:srcCompat="@drawable/sink_images_inart_waterfall_kitchen_sink" />
-
-
-                <!-- TextView -->
-                <TextView
-                    android:layout_width="237dp"
-                    android:layout_height="44dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="180dp"
-                    android:layout_marginEnd="10dp"
-                    android:elevation="2dp"
-                    android:text="InArt Waterfall Kitchen Sink - Stainless Steel, Single Bowl, Black Color, 30x18 Inches, Pull-out and Waterfall Faucet, RO tap, Cup washer, Drain Basket SKS060"
-                    android:textSize="10sp"
-                    app:layout_column="0"
-                    app:layout_row="0" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="230dp"
-                    android:elevation="2dp"
-                    android:text="Price = Rs 48,000.00"
-                    android:textSize="8sp"
-                    app:layout_column="0"
-                    app:layout_row="0" />
-
-
-                <!-- Button -->
-                <Button
-                    android:id="@+id/BuyNow2"
-                    android:layout_width="120dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="255dp"
-                    android:layout_marginTop="200dp"
-                    android:background="@drawable/button_background"
-                    android:onClick="onButtonClick"
-                    android:text="ADD TO CART"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="12dp" />
-
-            </androidx.cardview.widget.CardView>
+            <!-- Additional items here... -->
 
         </androidx.gridlayout.widget.GridLayout>
 
     </ScrollView>
-
-
 
 </RelativeLayout>

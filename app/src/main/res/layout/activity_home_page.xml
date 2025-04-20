@@ -11,35 +11,25 @@
     android:orientation="vertical"
     tools:context=".HomePage">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:layout_marginStart="30dp"
-        android:background="@drawable/button_background"
-        android:elevation="2dp"
-        app:itemIconSize="30dp"
-        app:menu="@menu/menu_bottom_navigation" />
-
-
 
         <include layout="@layout/toolbar_layout" />
 
 
     <ImageButton
+
         android:id="@+id/home_image_button"
         android:layout_width="350dp"
         android:layout_height="175dp"
         android:layout_below="@+id/toolbar_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:background="@drawable/rounded_corners"
+        android:background="@drawable/image_rounded_corners"
         android:contentDescription="@string/image_button"
         android:gravity="center_horizontal"
         android:scaleType="fitXY"
-        android:src="@drawable/image_button_1" />
+        android:padding="4dp"
+        android:src="@drawable/image_button_1"
+        app:shapeAppearanceOverlay="@style/roundImageView"/>
 
 
     <LinearLayout
