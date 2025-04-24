@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>toolbar_layout.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+toolbar_layout.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version</span><span class="s2">=&quot;1.0&quot; </span><span class="s1">encoding</span><span class="s2">=&quot;utf-8&quot;</span><span class="s0">?&gt;</span>
+
+<span class="s0">&lt;androidx.appcompat.widget.Toolbar</span>
+    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+    <span class="s1">android:layout_height</span><span class="s2">=&quot;50dp&quot;</span>
+    <span class="s1">xmlns:app</span><span class="s2">=&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="s1">android:id</span><span class="s2">=&quot;@+id/toolbar_layout&quot;</span>
+    <span class="s1">android:background</span><span class="s2">=&quot;#F34B4B&quot;</span>
+    <span class="s1">xmlns:android</span><span class="s2">=&quot;http://schemas.android.com/apk/res/android&quot;</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;ImageButton</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/toolbar_menu_icon&quot;</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;50dp&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_gravity</span><span class="s2">=&quot;start&quot;</span>
+            <span class="s1">android:scaleType</span><span class="s2">=&quot;fitCenter&quot;</span>
+            <span class="s1">android:background</span><span class="s2">=&quot;#00FFFFFF&quot;</span>
+            <span class="s1">android:src</span><span class="s2">=&quot;@drawable/toolbar_menu_icon&quot;</span><span class="s0">/&gt;</span>
+
+
+    <span class="s0">&lt;ImageButton</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/Home_icon&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_gravity</span><span class="s2">=&quot;start&quot;</span>
+        <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;20dp&quot;</span>
+        <span class="s1">android:background</span><span class="s2">=&quot;#00FFFFFF&quot;</span>
+        <span class="s1">android:scaleType</span><span class="s2">=&quot;fitCenter&quot;</span>
+        <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_icon&quot; </span><span class="s0">/&gt;</span>
+
+
+    <span class="s0">&lt;ImageButton</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/Account_icon&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;50dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_gravity</span><span class="s2">=&quot;end&quot;</span>
+        <span class="s1">android:background</span><span class="s2">=&quot;#00FFFFFF&quot;</span>
+        <span class="s1">android:onClick</span><span class="s2">=&quot;showPopMenu&quot;</span>
+        <span class="s1">android:padding</span><span class="s2">=&quot;5dp&quot;</span>
+        <span class="s1">android:scaleType</span><span class="s2">=&quot;fitCenter&quot;</span>
+        <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/account_icon&quot; </span><span class="s0">/&gt;</span>
+
+
+    <span class="s0">&lt;ImageButton</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/search_bar&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;50dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_gravity</span><span class="s2">=&quot;end&quot;</span>
+        <span class="s1">android:layout_marginEnd</span><span class="s2">=&quot;5dp&quot;</span>
+        <span class="s1">android:background</span><span class="s2">=&quot;#00FFFFFF&quot;</span>
+        <span class="s1">android:scaleType</span><span class="s2">=&quot;fitCenter&quot;</span>
+        <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/toolbar_search_icon&quot;</span><span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;/androidx.appcompat.widget.Toolbar&gt;</span>
+
+
+</pre>
+</body>
+</html>

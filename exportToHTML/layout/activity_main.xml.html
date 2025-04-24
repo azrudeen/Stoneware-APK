@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>activity_main.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+activity_main.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version</span><span class="s2">=&quot;1.0&quot; </span><span class="s1">encoding</span><span class="s2">=&quot;utf-8&quot;</span><span class="s0">?&gt;</span>
+<span class="s0">&lt;LinearLayout</span>
+    <span class="s1">xmlns:android</span><span class="s2">=&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="s1">xmlns:app</span><span class="s2">=&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="s1">xmlns:tools</span><span class="s2">=&quot;http://schemas.android.com/tools&quot;</span>
+    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+    <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+    <span class="s1">android:background</span><span class="s2">=&quot;@color/black&quot;</span>
+    <span class="s1">android:orientation</span><span class="s2">=&quot;vertical&quot;</span>
+    <span class="s1">android:layout_gravity</span><span class="s2">=&quot;center&quot;</span>
+    <span class="s1">tools:context</span><span class="s2">=&quot;.MainActivity&quot;</span><span class="s0">&gt;</span>
+
+
+
+        <span class="s0">&lt;LinearLayout</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+            <span class="s1">android:orientation</span><span class="s2">=&quot;vertical&quot;</span>
+            <span class="s1">android:background</span><span class="s2">=&quot;@color/black&quot;</span><span class="s0">&gt;</span>
+
+            <span class="s0">&lt;ImageView</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/login_logo&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;EditText</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/login_username&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;60dp&quot;</span>
+                <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;80dp&quot;</span>
+                <span class="s1">android:layout_marginLeft</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">android:layout_marginRight</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">android:background</span><span class="s2">=&quot;@drawable/login_input_fields&quot;</span>
+               <span class="s1">android:paddingStart</span><span class="s2">=&quot;15dp&quot;</span>
+                <span class="s1">android:hint</span><span class="s2">=&quot;User name&quot;</span>
+                <span class="s1">android:textAppearance</span><span class="s2">=&quot;@style/TextAppearance.AppCompat.Body2&quot;</span>
+                <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">android:textColorHint</span><span class="s2">=&quot;#FFFFFF&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;EditText</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/login_password&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;60dp&quot;</span>
+                <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;30dp&quot;</span>
+                <span class="s1">android:layout_marginLeft</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">android:layout_marginRight</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">android:background</span><span class="s2">=&quot;@drawable/login_input_fields&quot;</span>
+                <span class="s1">android:ems</span><span class="s2">=&quot;10&quot;</span>
+                <span class="s1">android:hint</span><span class="s2">=&quot;password&quot;</span>
+                <span class="s1">android:inputType</span><span class="s2">=&quot;textPassword&quot;</span>
+                <span class="s1">android:paddingStart</span><span class="s2">=&quot;15dp&quot;</span>
+                <span class="s1">android:textAppearance</span><span class="s2">=&quot;@style/TextAppearance.AppCompat.Body2&quot;</span>
+                <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">android:textColorHighlight</span><span class="s2">=&quot;#B3ACAC&quot;</span>
+                <span class="s1">android:textColorHint</span><span class="s2">=&quot;#FFFFFF&quot; </span><span class="s0">/&gt;</span>
+
+
+
+
+
+                <span class="s0">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot; </span><span class="s0">&gt;</span>
+
+
+                    <span class="s0">&lt;Button</span>
+                        <span class="s1">android:id</span><span class="s2">=&quot;@+id/LoginPage_Signup_button&quot;</span>
+                        <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                        <span class="s1">android:layout_height</span><span class="s2">=&quot;50dp&quot;</span>
+                        <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;16dp&quot;</span>
+                        <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;48dp&quot;</span>
+                        <span class="s1">android:background</span><span class="s2">=&quot;@drawable/login_page_corner_round2&quot;</span>
+
+                        <span class="s1">android:text</span><span class="s2">=&quot;Sign UP  ➔&quot;</span>
+                        <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                        <span class="s1">app:layout_constraintEnd_toStartOf</span><span class="s2">=&quot;@+id/LoginPage_Login_button&quot;</span>
+                        <span class="s1">app:layout_constraintHorizontal_bias</span><span class="s2">=&quot;0.12&quot;</span>
+                        <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+                        <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;parent&quot;</span>
+                        <span class="s1">app:strokeColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                        <span class="s1">app:strokeWidth</span><span class="s2">=&quot;4dp&quot; </span><span class="s0">/&gt;</span>
+
+                    <span class="s0">&lt;Button</span>
+                        <span class="s1">android:id</span><span class="s2">=&quot;@+id/LoginPage_Login_button&quot;</span>
+                        <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                        <span class="s1">android:layout_height</span><span class="s2">=&quot;50dp&quot;</span>
+                        <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;48dp&quot;</span>
+                        <span class="s1">android:layout_marginEnd</span><span class="s2">=&quot;16dp&quot;</span>
+
+                        <span class="s1">android:background</span><span class="s2">=&quot;@drawable/login_page_corner_round&quot;</span>
+                        <span class="s1">android:clickable</span><span class="s2">=&quot;true&quot;</span>
+                        <span class="s1">android:onClick</span><span class="s2">=&quot;Login_button&quot;</span>
+                        <span class="s1">android:text</span><span class="s2">=&quot;Login&quot;</span>
+                        <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                        <span class="s1">android:textColorLink</span><span class="s2">=&quot;#00FFFFFF&quot;</span>
+                        <span class="s1">android:textSize</span><span class="s2">=&quot;18dp&quot;</span>
+                        <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot;</span>
+
+                        <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;parent&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+
+
+
+        <span class="s0">&lt;/LinearLayout&gt;</span>
+
+<span class="s0">&lt;/LinearLayout&gt;</span></pre>
+</body>
+</html>

@@ -1,0 +1,1058 @@
+<html>
+<head>
+<title>test1.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #bcbec4;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+test1.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version</span><span class="s2">=&quot;1.0&quot; </span><span class="s1">encoding</span><span class="s2">=&quot;utf-8&quot;</span><span class="s0">?&gt;</span>
+
+<span class="s0">&lt;ScrollView</span>
+    <span class="s1">xmlns:android</span><span class="s2">=&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="s1">xmlns:app</span><span class="s2">=&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="s1">xmlns:tools</span><span class="s2">=&quot;http://schemas.android.com/tools&quot;</span>
+    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+    <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span><span class="s0">&gt;</span>
+
+
+    <span class="s0">&lt;LinearLayout</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+        <span class="s1">android:orientation</span><span class="s2">=&quot;vertical&quot;</span>
+        <span class="s1">android:background</span><span class="s2">=&quot;#D9D9D9&quot;</span>
+        <span class="s1">android:foregroundTint</span><span class="s2">=&quot;#00CC1C1C&quot;</span>
+        <span class="s1">tools:context</span><span class="s2">=&quot;.HomePage&quot;</span><span class="s0">&gt;</span>
+
+
+        <span class="s0">&lt;Toolbar</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;50dp&quot;</span>
+            <span class="s1">android:background</span><span class="s2">=&quot;#F34B4B&quot;</span>
+            <span class="s1">android:orientation</span><span class="s2">=&quot;horizontal&quot;</span><span class="s0">&gt;</span>
+
+            <span class="s0">&lt;ImageButton</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/nav_menu_icon&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;50dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+
+                <span class="s1">android:scaleType</span><span class="s2">=&quot;fitCenter&quot;</span>
+                <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/menu&quot; </span><span class="s0">/&gt;</span>
+
+
+            <span class="s0">&lt;ImageButton</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/Home_icon&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+                <span class="s1">android:background</span><span class="s2">=&quot;#00FFFFFF&quot;</span>
+                <span class="s1">android:scaleType</span><span class="s2">=&quot;fitCenter&quot;</span>
+                <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_icon&quot; </span><span class="s0">/&gt;</span>
+
+
+            <span class="s0">&lt;ImageButton</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/search_bar&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;50dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+                <span class="s1">android:padding</span><span class="s2">=&quot;5dp&quot;</span>
+                <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;100dp&quot;</span>
+                <span class="s1">android:background</span><span class="s2">=&quot;#00FFFFFF&quot;</span>
+                <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/search_4&quot;</span><span class="s0">/&gt;</span>
+
+
+            <span class="s0">&lt;ImageButton</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/Account_icon&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;50dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+                <span class="s1">android:padding</span><span class="s2">=&quot;5dp&quot;</span>
+                <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;5dp&quot;</span>
+                <span class="s1">android:background</span><span class="s2">=&quot;#00FFFFFF&quot;</span>
+                <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/account_icon&quot;</span><span class="s0">/&gt;</span>
+        <span class="s0">&lt;/Toolbar&gt;</span>
+
+
+        <span class="s4">&lt;!-- GridLayout  --&gt;</span>
+
+        <span class="s0">&lt;ImageButton</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/home_image_button&quot;</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;350dp&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;200dp&quot;</span>
+            <span class="s1">android:gravity</span><span class="s2">=&quot;center_horizontal&quot;</span>
+            <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;80dp&quot;</span>
+            <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+            <span class="s1">android:layout_gravity</span><span class="s2">=&quot;center_horizontal&quot;</span>
+            <span class="s1">android:src</span><span class="s2">=&quot;@drawable/pngtree_marble_natural_breccia&quot;</span>
+            <span class="s0">/&gt;</span>
+
+        <span class="s0">&lt;LinearLayout</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+            <span class="s1">android:orientation</span><span class="s2">=&quot;horizontal&quot;</span>
+            <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;30dp&quot;</span><span class="s0">&gt;</span>
+
+            <span class="s0">&lt;Button</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/Popular&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;35dp&quot;</span>
+                <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;30dp&quot;</span>
+                <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                <span class="s1">android:text</span><span class="s2">=&quot;Popular&quot;</span>
+                <span class="s1">android:textColor</span><span class="s2">=&quot;@color/white&quot;</span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;Button</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/Filter&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;35dp&quot;</span>
+                <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;50dp&quot;</span>
+                <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                <span class="s1">android:text</span><span class="s2">=&quot;@string/filter_button_text&quot;</span>
+                <span class="s1">android:textAlignment</span><span class="s2">=&quot;viewStart&quot;</span>
+                <span class="s1">android:paddingStart</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">android:textColor</span><span class="s2">=&quot;@color/white&quot;</span><span class="s0">/&gt;</span>
+        <span class="s0">&lt;/LinearLayout&gt;</span>
+
+
+        <span class="s0">&lt;androidx.gridlayout.widget.GridLayout</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/gridLayout&quot;</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;30dp&quot;</span>
+            <span class="s1">android:layout_gravity</span><span class="s2">=&quot;center_horizontal&quot;</span>
+            <span class="s1">android:gravity</span><span class="s2">=&quot;center&quot;</span>
+            <span class="s1">android:horizontalSpacing</span><span class="s2">=&quot;16dp&quot;</span>
+            <span class="s1">android:numColumns</span><span class="s2">=&quot;auto_fit&quot;</span>
+            <span class="s1">android:verticalSpacing</span><span class="s2">=&quot;16dp&quot;</span>
+            <span class="s1">app:columnCount</span><span class="s2">=&quot;2&quot;</span>
+            <span class="s1">app:rowCount</span><span class="s2">=&quot;11&quot;</span><span class="s0">&gt;</span>
+
+            <span class="s4">&lt;!-- CardView 1 --&gt;</span>
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;0&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginEnd</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot;</span>
+                    <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                    <span class="s1">app:layout_row</span><span class="s2">=&quot;0&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot;</span>
+                    <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                    <span class="s1">app:layout_row</span><span class="s2">=&quot;0&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow1L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;80dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;95dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView1L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                    <span class="s1">app:layout_row</span><span class="s2">=&quot;0&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- cardview2 --&gt;</span>
+
+
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;1dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;1&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;0&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marbles&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot;</span>
+                    <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                    <span class="s1">app:layout_row</span><span class="s2">=&quot;0&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 85 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot;</span>
+                    <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                    <span class="s1">app:layout_row</span><span class="s2">=&quot;0&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow1R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:ellipsize</span><span class="s2">=&quot;end&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:padding</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12dp&quot;</span>
+                    <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                    <span class="s1">app:layout_row</span><span class="s2">=&quot;0&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView1R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                    <span class="s1">app:layout_row</span><span class="s2">=&quot;0&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  3 --&gt;</span>
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;1&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow2L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot;</span>
+                    <span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView2L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  4 --&gt;</span>
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;1&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;1&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow2R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot;</span>
+                    <span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView2R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  5 --&gt;</span>
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;3&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow3L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot;</span>
+                    <span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView3L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  7 --&gt;</span>
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;1&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;3&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow3R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot;</span>
+                    <span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView3R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  8 --&gt;</span>
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;4&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow4L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView4L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  6 --&gt;</span>
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;1&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;4&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow4R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot;</span>
+                    <span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView4R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  8L --&gt;</span>
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;5&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow5L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot;</span>
+                    <span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView5L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  8R --&gt;</span>
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;1&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;5&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow5R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot;</span>
+                    <span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView5R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  9L --&gt;</span>
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;6&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow6L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot;</span>
+                    <span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView6L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  9R --&gt;</span>
+
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;1&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;6&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow6R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot;</span>
+                    <span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView6R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  10L --&gt;</span>
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;0&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;7&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow7L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot;</span>
+                    <span class="s0">/&gt;</span>
+
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView7L&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+            <span class="s4">&lt;!-- CardView  10R --&gt;</span>
+
+            <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;180dp&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;140dp&quot;</span>
+                <span class="s1">android:layout_margin</span><span class="s2">=&quot;4dp&quot;</span>
+                <span class="s1">app:cardBackgroundColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;10dp&quot;</span>
+                <span class="s1">app:cardElevation</span><span class="s2">=&quot;8dp&quot;</span>
+                <span class="s1">app:layout_column</span><span class="s2">=&quot;1&quot;</span>
+                <span class="s1">app:layout_row</span><span class="s2">=&quot;7&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s4">&lt;!-- ImageView --&gt;</span>
+
+                <span class="s4">&lt;!-- TextView --&gt;</span>
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;tiles marblhes&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;10sp&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;TextView</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;120dp&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Price = Rs 45 sq&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;8sp&quot; </span><span class="s0">/&gt;</span>
+
+
+                <span class="s4">&lt;!-- Button --&gt;</span>
+                <span class="s0">&lt;Button</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/BuyNow7R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;85dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;110dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                    <span class="s1">android:onClick</span><span class="s2">=&quot;onButtonClick&quot;</span>
+                    <span class="s1">android:paddingBottom</span><span class="s2">=&quot;1dp&quot;</span>
+                    <span class="s1">android:text</span><span class="s2">=&quot;Book Now&quot;</span>
+                    <span class="s1">android:textAlignment</span><span class="s2">=&quot;center&quot;</span>
+                    <span class="s1">android:textColor</span><span class="s2">=&quot;#FFFFFF&quot;</span>
+                    <span class="s1">android:textSize</span><span class="s2">=&quot;12sp&quot;</span>
+                    <span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;ImageView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/imageView7R&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;150dp&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;69dp&quot;</span>
+                    <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+                    <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span>
+                    <span class="s1">android:background</span><span class="s2">=&quot;@drawable/rounded_corners&quot;</span>
+                    <span class="s1">android:elevation</span><span class="s2">=&quot;2dp&quot;</span>
+                    <span class="s1">android:scaleType</span><span class="s2">=&quot;fitXY&quot;</span>
+                    <span class="s1">app:srcCompat</span><span class="s2">=&quot;@drawable/home_img1&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+        <span class="s0">&lt;/androidx.gridlayout.widget.GridLayout&gt;</span>
+
+    <span class="s0">&lt;/LinearLayout&gt;</span>
+
+<span class="s0">&lt;/ScrollView&gt;</span></pre>
+</body>
+</html>

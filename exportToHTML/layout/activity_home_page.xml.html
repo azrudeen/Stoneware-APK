@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>activity_home_page.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #bcbec4;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+activity_home_page.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version</span><span class="s2">=&quot;1.0&quot; </span><span class="s1">encoding</span><span class="s2">=&quot;utf-8&quot;</span><span class="s0">?&gt;</span>
+<span class="s0">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+    <span class="s1">xmlns:android</span><span class="s2">=&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="s1">xmlns:app</span><span class="s2">=&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="s1">xmlns:tools</span><span class="s2">=&quot;http://schemas.android.com/tools&quot;</span>
+    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+    <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+    <span class="s1">tools:context</span><span class="s2">=&quot;.HomePage&quot;</span><span class="s0">&gt;</span>
+
+    <span class="s4">&lt;!-- Custom Toolbar --&gt;</span>
+    <span class="s0">&lt;include</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/toolbar_layout&quot;</span>
+        <span class="s1">layout</span><span class="s2">=&quot;@layout/toolbar_layout&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot; </span><span class="s0">/&gt;</span>
+
+    <span class="s4">&lt;!-- Hero Banner --&gt;</span>
+    <span class="s0">&lt;ImageView</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/home_image_button&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;0dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;180dp&quot;</span>
+        <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;16dp&quot;</span>
+        <span class="s1">android:src</span><span class="s2">=&quot;@drawable/image_button_1&quot;</span>
+        <span class="s1">android:scaleType</span><span class="s2">=&quot;centerCrop&quot;</span>
+        <span class="s1">android:background</span><span class="s2">=&quot;@drawable/image_rounded_corners&quot;</span>
+        <span class="s1">android:contentDescription</span><span class="s2">=&quot;@string/image_button&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf</span><span class="s2">=&quot;@id/toolbar_layout&quot;</span>
+        <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot; </span><span class="s0">/&gt;</span>
+
+    <span class="s4">&lt;!-- Filter Buttons Row --&gt;</span>
+    <span class="s0">&lt;HorizontalScrollView</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/filterScroll&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;0dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;16dp&quot;</span>
+        <span class="s1">android:fillViewport</span><span class="s2">=&quot;true&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf</span><span class="s2">=&quot;@id/home_image_button&quot;</span>
+        <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot;</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;LinearLayout</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+            <span class="s1">android:orientation</span><span class="s2">=&quot;horizontal&quot;</span>
+            <span class="s1">android:padding</span><span class="s2">=&quot;8dp&quot;</span>
+            <span class="s1">android:gravity</span><span class="s2">=&quot;center&quot;</span><span class="s0">&gt;</span>
+
+            <span class="s0">&lt;Button</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/Popular&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;35dp&quot;</span>
+                <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                <span class="s1">android:text</span><span class="s2">=&quot;🔥 Popular&quot;</span>
+                <span class="s1">android:textColor</span><span class="s2">=&quot;@color/white&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;Button</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/Filter&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;35dp&quot;</span>
+                <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;16dp&quot;</span>
+                <span class="s1">android:background</span><span class="s2">=&quot;@drawable/button_background&quot;</span>
+                <span class="s1">android:text</span><span class="s2">=&quot;⚙️ Filter&quot;</span>
+                <span class="s1">android:textColor</span><span class="s2">=&quot;@color/white&quot; </span><span class="s0">/&gt;</span>
+        <span class="s0">&lt;/LinearLayout&gt;</span>
+    <span class="s0">&lt;/HorizontalScrollView&gt;</span>
+
+    <span class="s4">&lt;!-- Product List --&gt;</span>
+    <span class="s0">&lt;androidx.recyclerview.widget.RecyclerView</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/productRecycler&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;0dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;0dp&quot;</span>
+        <span class="s1">android:padding</span><span class="s2">=&quot;8dp&quot;</span>
+        <span class="s1">app:layoutManager</span><span class="s2">=&quot;androidx.recyclerview.widget.GridLayoutManager&quot;</span>
+        <span class="s1">app:spanCount</span><span class="s2">=&quot;2&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf</span><span class="s2">=&quot;@id/filterScroll&quot;</span>
+        <span class="s1">app:layout_constraintBottom_toBottomOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot; </span><span class="s0">/&gt;</span>
+
+<span class="s0">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span></pre>
+</body>
+</html>
