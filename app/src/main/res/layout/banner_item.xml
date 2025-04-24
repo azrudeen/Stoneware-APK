@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Banner Image with Rounded Corners -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/banner_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/banner1"
+        android:contentDescription="@string/image_button"
+        app:shapeAppearanceOverlay="@style/RoundedCornerImage" />
+
+    <!-- Grey Overlay with Same Rounded Corners -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/banner_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="#66000000"
+        app:shapeAppearanceOverlay="@style/RoundedCornerImage" />
+
+    <!-- Bottom Left Text -->
+    <TextView
+        android:id="@+id/banner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Find Your Perfect\nTile Aesthetic"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="20sp"
+        android:lineSpacingExtra="2dp" />
+</FrameLayout>

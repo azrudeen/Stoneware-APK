@@ -13,7 +13,7 @@
         android:label="@string/Stoneware"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Base.Theme.Stoneware"
+        android:theme="@style/Theme.Stoneware"
         tools:targetApi="31">
         <activity
             android:name=".SettingsPage"

@@ -1,56 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <androidx.appcompat.widget.Toolbar
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
     android:background="#F34B4B"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:elevation="4dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
 
-        <ImageButton
-            android:id="@+id/toolbar_menu_icon"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:scaleType="fitCenter"
-            android:background="#00FFFFFF"
-            android:src="@drawable/toolbar_menu_icon"/>
+    <!-- Menu Button -->
+    <ImageButton
+        android:id="@+id/toolbar_menu_icon"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/toolbar_menu_icon"/>
 
-
+    <!-- Home Button -->
     <ImageButton
         android:id="@+id/Home_icon"
-        android:layout_width="150dp"
+        android:layout_width="120dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:layout_marginStart="20dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
         app:srcCompat="@drawable/home_icon" />
 
-
+    <!-- Account Button -->
     <ImageButton
         android:id="@+id/Account_icon"
-        android:layout_width="50dp"
+        android:layout_width="48dp"
         android:layout_height="match_parent"
         android:layout_gravity="end"
-        android:background="#00FFFFFF"
-        android:onClick="showPopMenu"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:padding="8dp"
+        android:scaleType="centerInside"
         app:srcCompat="@drawable/account_icon" />
 
-
+    <!-- Search Button -->
     <ImageButton
         android:id="@+id/search_bar"
-        android:layout_width="50dp"
+        android:layout_width="48dp"
         android:layout_height="match_parent"
         android:layout_gravity="end"
-        android:layout_marginEnd="5dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
         app:srcCompat="@drawable/toolbar_search_icon"/>
 
-    </androidx.appcompat.widget.Toolbar>
-
-
+</androidx.appcompat.widget.Toolbar>

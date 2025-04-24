@@ -4,4 +4,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="pepperRed">#F34B4B</color>
     <color name="grey">#d2d2d2</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="teal_900">#C4C4C4</color>
 </resources>
+
