@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <!-- Logo Background Frame -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="304dp"
+            android:layout_height="172dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/stoneware_logo" />
+    </FrameLayout>
+
+    <!-- Username Field -->
+    <EditText
+        android:id="@+id/login_username"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/login_input_fields"
+        android:paddingStart="15dp"
+        android:hint="User name"
+        android:textColor="#000000"
+        android:textColorHint="#999999"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+    <!-- Password Field -->
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/login_input_fields"
+        android:paddingStart="15dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="#999999"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+    <!-- Forgot Password TextView -->
+    <TextView
+        android:id="@+id/forgot_password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Forgot Password?"
+        android:textColor="@color/pepperRed"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <!-- Buttons (Login and SignUp) -->
+
+    <Button
+        android:id="@+id/LoginPage_Login_button"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:minWidth="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/login_page_corner_round"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.48"/>
+
+    <!-- Forgot Password TextView -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Don't have an account?"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"/>
+
+
+        <Button
+            android:id="@+id/LoginPage_Signup_button"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="100dp"
+            android:minWidth="150dp"
+            android:background="@drawable/login_page_corner_round2"
+            android:text="Sign UP ➔"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.48"/>
+
+
+</LinearLayout>

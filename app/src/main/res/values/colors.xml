@@ -9,5 +9,6 @@
     <color name="teal_200">#03DAC5</color>
     <color name="teal_700">#018786</color>
     <color name="teal_900">#C4C4C4</color>
+    <color name="Login_signup_page">#999999</color>
 </resources>
 

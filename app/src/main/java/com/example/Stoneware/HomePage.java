@@ -1,52 +1,72 @@
-
 package com.example.Stoneware;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.Toast;
-import androidx.recyclerview.widget.RecyclerView;
+
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.List;
-import java.util.ArrayList;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
-
 import com.google.android.material.navigation.NavigationView;
 
-public class HomePage extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class HomePage extends BaseActivity {
 
     DrawerLayout drawerLayout;
     ImageButton toolbar_menu_icon;
     NavigationView navigationView;
-
-
-
-    public void showPopMenu(View View) {
-        PopupMenu popupMenu = new PopupMenu(this,View);
-        MenuInflater inflater = popupMenu.getMenuInflater();
-        inflater.inflate(R.menu.menu_profile, popupMenu.getMenu());
-        popupMenu.show();
-    }
-
-
+    ViewPager2 viewPager;
+    RecyclerView recyclerView;
+    BottomNavigationView bottomNavigationView;
+    Handler handler;
+    Runnable autoScrollRunnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_drawer);
 
-        ViewPager2 viewPager = findViewById(R.id.heroViewPager);
+        setupToolbar();
 
+        // Initialize Views
+        viewPager = findViewById(R.id.heroViewPager);
+        recyclerView = findViewById(R.id.productRecycler);
+        drawerLayout = findViewById(R.id.drawerLayout);
+        toolbar_menu_icon = findViewById(R.id.toolbar_menu_icon);
+        navigationView = findViewById(R.id.navigationView);
+        bottomNavigationView = findViewById(R.id.bottom_navigation_view);
+
+        // Hero Banner
+        setupHeroBanner();
+
+        // RecyclerView
+        setupRecyclerView();
+
+        // Filter Buttons
+        setupFilterButtons();
+
+        // Bottom Navigation
+        setupBottomNavigation();
+
+        // 🛠️ Setup Navigation Drawer item clicks
+        setupDrawerNavigation();
+    }
+
+    private void setupHeroBanner() {
         List<BannerItem> banners = new ArrayList<>();
         banners.add(new BannerItem(R.drawable.banner1, "Find Your Perfect \nTile Aesthetic"));
         banners.add(new BannerItem(R.drawable.banner2, "Tiles That Shine"));
@@ -57,9 +77,8 @@ public class HomePage extends AppCompatActivity {
         BannerAdapter adapter = new BannerAdapter(banners);
         viewPager.setAdapter(adapter);
 
-// Auto-scroll every 5 seconds
-        Handler handler = new Handler();
-        Runnable autoScrollRunnable = new Runnable() {
+        handler = new Handler();
+        autoScrollRunnable = new Runnable() {
             int currentPage = 0;
 
             @Override
@@ -70,77 +89,25 @@ public class HomePage extends AppCompatActivity {
             }
         };
         handler.postDelayed(autoScrollRunnable, 5000);
+    }
 
-        RecyclerView recyclerView = findViewById(R.id.productRecycler);
+    private void setupRecyclerView() {
         List<TileModel> tileList = new ArrayList<>();
-
-        // Sample tiles
         tileList.add(new TileModel("Marble White", "₹950", R.drawable.pngtree_marble_natural_breccia));
         tileList.add(new TileModel("Black Granite", "₹650", R.drawable.tiles_image_8));
         tileList.add(new TileModel("Wood Finish", "₹870", R.drawable.tiles_image_1));
         tileList.add(new TileModel("Wood Finish", "₹340", R.drawable.sink_images_inart_waterfall_kitchen_sink));
-        tileList.add(new TileModel("Marble White", "₹550", R.drawable.tiles_image_1));
-        tileList.add(new TileModel("Marble White", "₹250", R.drawable.tiles_image_2));
-        tileList.add(new TileModel("Marble White", "₹460", R.drawable.tiles_image_3));
-        tileList.add(new TileModel("Marble White", "₹150", R.drawable.tiles_image_4));
-        tileList.add(new TileModel("Marble White", "₹220", R.drawable.tiles_image_5));
-        tileList.add(new TileModel("Marble White", "₹410", R.drawable.tiles_image_6));
-        tileList.add(new TileModel("Marble White", "₹650", R.drawable.tiles_image_7));
-        tileList.add(new TileModel("Marble White", "₹260", R.drawable.tiles_image_8));
+        tileList.add(new TileModel("Marble White", "₹950", R.drawable.pngtree_marble_natural_breccia));
+        tileList.add(new TileModel("Black Granite", "₹650", R.drawable.tiles_image_8));
+        tileList.add(new TileModel("Wood Finish", "₹870", R.drawable.tiles_image_1));
+        tileList.add(new TileModel("Wood Finish", "₹340", R.drawable.sink_images_inart_waterfall_kitchen_sink));
 
         TileAdapter tileAdapter = new TileAdapter(this, tileList);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(tileAdapter);
-        drawerLayout = findViewById(R.id.drawerLayout);
-        toolbar_menu_icon = findViewById(R.id.toolbar_menu_icon);
-        navigationView = findViewById(R.id.navigationView);
-        navigationView.setItemIconTintList(null);
-        toolbar_menu_icon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawerLayout.openDrawer(navigationView);
-            }
-        });
+    }
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                // Handle navigation item clicks here
-                int itemId = item.getItemId();
-                if (itemId == R.id.nav_home) {
-                    // Navigate to HomeActivity when "Home" is clicked
-                    startActivity(new Intent(HomePage.this, HomePage.class));
-                } else if (itemId == R.id.nav_tiles) {
-                    // Navigate to TilesActivity when "Tiles" is clicked
-                    startActivity(new Intent(HomePage.this, TilesPage.class));
-                } else if (itemId == R.id.nav_granite) {
-                    // Navigate to GraniteActivity when "Granite" is clicked
-                    startActivity(new Intent(HomePage.this, GranitePage.class));
-                } else if (itemId == R.id.nav_marble_stone) {
-                    // Navigate to GraniteActivity when "Granite" is clicked
-                    startActivity(new Intent(HomePage.this, WhiteMarblePage.class));
-                }else if (itemId == R.id.nav_Italian_marbles) {
-                    // Navigate to GraniteActivity when "Granite" is clicked
-                    startActivity(new Intent(HomePage.this, ItalianMarblesPage.class));
-                }else if (itemId == R.id.nav_adhesives) {
-                    // Navigate to GraniteActivity when "Granite" is clicked
-                    startActivity(new Intent(HomePage.this, AdhesivesPage.class));
-                }else if (itemId == R.id.nav_sinks) {
-                    // Navigate to GraniteActivity when "Granite" is clicked
-                    startActivity(new Intent(HomePage.this, SinksPage.class));
-                }else if (itemId == R.id.nav_settings) {
-                    // Navigate to GraniteActivity when "Granite" is clicked
-                    startActivity(new Intent(HomePage.this, SettingsPage.class));
-                }else {
-                    // Handle other navigation items if needed
-                    Toast.makeText(HomePage.this, "Under development", Toast.LENGTH_SHORT).show();
-                }
-
-                drawerLayout.closeDrawer(navigationView); // Close the drawer after selection
-                return true;
-            }
-        });
-        // ✅ Filter Button Toggle Logic
+    private void setupFilterButtons() {
         MaterialButton btnPopular = findViewById(R.id.Popular);
         MaterialButton btnFilter = findViewById(R.id.Filter);
         MaterialButton btnNewest = findViewById(R.id.Newest);
@@ -152,17 +119,14 @@ public class HomePage extends AppCompatActivity {
         allButtons.add(btnNewest);
         allButtons.add(btnPrice);
 
-        // Button click listener to toggle checked state and handle actions
         View.OnClickListener toggleListener = view -> {
             for (MaterialButton button : allButtons) {
-                button.setChecked(button.getId() == view.getId()); // Toggle checked state
+                button.setChecked(button.getId() == view.getId());
             }
-
             view.animate().scaleX(0.95f).scaleY(0.95f).setDuration(100).withEndAction(() -> {
                 view.animate().scaleX(1f).scaleY(1f).setDuration(100).start();
             }).start();
 
-            // Perform specific action based on the button clicked
             int id = view.getId();
             if (id == R.id.Popular) {
                 Toast.makeText(HomePage.this, "Popular clicked", Toast.LENGTH_SHORT).show();
@@ -175,10 +139,101 @@ public class HomePage extends AppCompatActivity {
             }
         };
 
-        // Set the click listener on all buttons
         btnPopular.setOnClickListener(toggleListener);
         btnFilter.setOnClickListener(toggleListener);
         btnNewest.setOnClickListener(toggleListener);
         btnPrice.setOnClickListener(toggleListener);
+    }
+
+    private void setupBottomNavigation() {
+        ColorStateList colorStateList = new ColorStateList(
+                new int[][]{
+                        new int[]{android.R.attr.state_checked},
+                        new int[]{-android.R.attr.state_checked}
+                },
+                new int[]{
+                        Color.parseColor("#FFFFFF"), // Selected color
+                        Color.parseColor("#00000000")  // Unselected color
+                }
+        );
+
+        bottomNavigationView.setItemIconTintList(null);
+        bottomNavigationView.setItemTextColor(colorStateList);
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            Intent intent = null;
+            if (id == R.id.nav_home) {
+                return true;
+            } else if (id == R.id.nav_orders) {
+                intent = new Intent(HomePage.this, SettingsPage.class);
+            } else if (id == R.id.nav_tiles) {
+                intent = new Intent(HomePage.this, TilesPage.class);
+            } else if (id == R.id.nav_granite) {
+                intent = new Intent(HomePage.this, GranitePage.class);
+            } else if (id == R.id.nav_italian) {
+                intent = new Intent(HomePage.this, ItalianMarblesPage.class);
+            } else if (id == R.id.nav_calculator) {
+                intent = new Intent(HomePage.this, SquareFeetCalculator.class);
+            } else if (id == R.id.nav_settings) {
+                intent = new Intent(HomePage.this, SettingsPage.class);
+            }
+            if (intent != null) {
+                startActivity(intent);
+                return true;
+            }
+            return false;
+        });
+    }
+
+    private void setupDrawerNavigation() {
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+            Intent intent = null;
+
+            if (id == R.id.nav_home) {
+                intent = new Intent(HomePage.this, HomePage.class);
+            } else if (id == R.id.nav_tiles) {
+                intent = new Intent(HomePage.this, TilesPage.class);
+            } else if (id == R.id.nav_granite) {
+                intent = new Intent(HomePage.this, GranitePage.class);
+            } else if (id == R.id.nav_marble_stone) {
+                intent = new Intent(HomePage.this, WhiteMarblePage.class);
+            } else if (id == R.id.nav_Italian_marbles) {
+                intent = new Intent(HomePage.this, ItalianMarblesPage.class);
+            } else if (id == R.id.nav_adhesives) {
+                intent = new Intent(HomePage.this, AdhesivesPage.class);
+            } else if (id == R.id.nav_sinks) {
+                intent = new Intent(HomePage.this, SinksPage.class);
+            } else if (id == R.id.nav_calculator) {
+                intent = new Intent(HomePage.this, SquareFeetCalculator.class);
+            } else if (id == R.id.nav_settings) {
+                intent = new Intent(HomePage.this, SettingsPage.class);
+            } else if (id == R.id.nav_help_feedback || id == R.id.nav_shop_login) {
+                Toast.makeText(this, "Under Development", Toast.LENGTH_SHORT).show();
+            }
+
+            if (intent != null) {
+                startActivity(intent);
+            }
+
+            drawerLayout.closeDrawers(); // Always close the drawer after clicking
+            return true;
+        });
+    }
+
+    public void showPopMenu(View view) {
+        PopupMenu popupMenu = new PopupMenu(this, view);
+        MenuInflater inflater = popupMenu.getMenuInflater();
+        inflater.inflate(R.menu.menu_profile, popupMenu.getMenu());
+        popupMenu.show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (handler != null && autoScrollRunnable != null) {
+            handler.removeCallbacks(autoScrollRunnable);
+        }
     }
 }

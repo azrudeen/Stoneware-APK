@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.appcompat.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,50 +7,57 @@
     android:layout_height="56dp"
     android:background="#F34B4B"
     android:elevation="4dp"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp">
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
     <!-- Menu Button -->
     <ImageButton
         android:id="@+id/toolbar_menu_icon"
-        android:layout_width="48dp"
+        android:layout_width="60dp"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
-        android:src="@drawable/toolbar_menu_icon"/>
+        android:src="@drawable/toolbar_menu_icon"
+        android:contentDescription="Menu"/>
 
     <!-- Home Button -->
     <ImageButton
         android:id="@+id/Home_icon"
-        android:layout_width="120dp"
+        android:layout_width="130dp"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
         android:layout_marginStart="20dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
-        app:srcCompat="@drawable/home_icon" />
+        android:src="@drawable/stoneware_logo"
+        android:contentDescription="Home"/>
 
-    <!-- Account Button -->
-    <ImageButton
-        android:id="@+id/Account_icon"
-        android:layout_width="48dp"
+    <!-- Spacer View to push icons to the end -->
+    <View
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_gravity="end"
-        android:background="@android:color/transparent"
-        android:padding="8dp"
-        android:scaleType="centerInside"
-        app:srcCompat="@drawable/account_icon" />
+        android:layout_weight="1" />
 
     <!-- Search Button -->
     <ImageButton
         android:id="@+id/search_bar"
-        android:layout_width="48dp"
+        android:layout_width="40dp"
         android:layout_height="match_parent"
-        android:layout_gravity="end"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="80dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
-        app:srcCompat="@drawable/toolbar_search_icon"/>
+        app:srcCompat="@drawable/ic_search_2"
+        android:contentDescription="Search"/>
+
+    <!-- Account Button -->
+    <ImageButton
+        android:id="@+id/Account_icon"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/account"
+        android:contentDescription="Account"/>
 
 </androidx.appcompat.widget.Toolbar>

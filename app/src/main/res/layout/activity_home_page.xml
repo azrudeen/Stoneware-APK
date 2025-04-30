@@ -15,39 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Hero Banner with Foreground Text
-    <FrameLayout
-        android:id="@+id/hero_banner"
-        android:layout_width="350dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/home_image_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/homepage_tile_asthetic"
-            android:contentDescription="@string/image_button"
-            app:shapeAppearanceOverlay="@style/RoundedCornerImage" />
-
-        <TextView
-            android:id="@+id/foreground_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:text="@string/Home_page_main_image"
-            android:textColor="@android:color/white"
-            android:fontFamily="@font/poppins_bold"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:background="@drawable/rounded_textview_background"
-            android:padding="20dp" />
-    </FrameLayout>
-    -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/heroViewPager"
         android:layout_width="350dp"
@@ -150,4 +117,19 @@
         app:layout_constraintTop_toBottomOf="@id/filterScroll"
         app:layout_constraintVertical_bias="1.0"
         app:spanCount="2" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bottom_nav_background"
+        android:elevation="8dp"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@null"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

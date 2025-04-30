@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:background="#66000000"
+        android:background="#32A6A3A3"
         app:shapeAppearanceOverlay="@style/RoundedCornerImage" />
 
     <!-- Bottom Left Text -->
@@ -31,9 +31,10 @@
         android:layout_gravity="bottom|start"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:lineSpacingExtra="2dp"
         android:text="Find Your Perfect\nTile Aesthetic"
         android:textColor="@android:color/white"
-        android:fontFamily="@font/poppins_bold"
         android:textSize="20sp"
-        android:lineSpacingExtra="2dp" />
+        android:textStyle="bold" />
 </FrameLayout>

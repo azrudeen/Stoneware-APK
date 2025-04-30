@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Stoneware"
         tools:targetApi="31">
+        <activity
+            android:name=".SquareFeetCalculator"
+            android:exported="false" />
         <activity
             android:name=".SettingsPage"
             android:exported="false" />
@@ -37,7 +41,7 @@
             android:name=".TilesPage"
             android:exported="false" />
         <activity
-            android:name=".loading_animation"
+            android:name=".ProgressBarActivity"
             android:exported="false" />
         <activity
             android:name=".HomePage"

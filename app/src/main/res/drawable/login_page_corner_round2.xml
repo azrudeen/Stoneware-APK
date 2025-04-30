@@ -1,9 +1,12 @@
-<!-- res/drawable/button_custom_background.xml -->
+<!-- res/drawable/login_page_corner_round2.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
-    <corners android:radius="200dp"
-        />
-    <stroke android:width="2dp"
-        android:color="#FFFFFF"/>
+    <solid android:color="@android:color/transparent" /> <!-- Transparent fill -->
+
+    <stroke
+        android:width="2dp"
+        android:color="#F34B4B"/> <!-- Red border -->
+
+    <corners android:radius="200dp" />
 </shape>

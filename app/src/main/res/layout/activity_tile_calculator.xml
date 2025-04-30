@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".SquareFeetCalculator">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Toolbar -->
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
+
+        <!-- Input Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/inputCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Shape Spinner -->
+                <Spinner
+                    android:id="@+id/shapeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/login_input_fields"
+                    android:prompt="@string/select_shape" />
+
+                <!-- Length Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Length">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/lengthInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/login_input_fields"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/lengthUnitSpinner"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/login_input_fields" />
+                </LinearLayout>
+
+                <!-- Width Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Width">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/widthInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/login_input_fields"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/widthUnitSpinner"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/login_input_fields" />
+                </LinearLayout>
+
+                <!-- Tile Size Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Tile Size (e.g. 4x2)">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tileSizeInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Cost Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Cost per sq ft (optional)">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/costInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Calculate Button -->
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:text="Calculate"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_corners" />
+
+        <!-- Result Table -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:background="#000"
+                android:padding="1dp">
+                <TextView
+                    android:text="Result"
+                    android:textStyle="bold"
+                    android:textColor="#FFF"
+                    android:padding="8dp"
+                    android:layout_span="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <TableRow android:background="#ccc">
+                <TextView
+                    android:text="Total Area"
+                    android:padding="8dp"
+                    android:background="#FFF"/>
+                <TextView
+                    android:id="@+id/resultArea"
+                    android:padding="8dp"
+                    android:background="#FFF"/>
+            </TableRow>
+
+            <TableRow android:background="#ccc">
+                <TextView
+                    android:text="Tile Size"
+                    android:padding="8dp"
+                    android:background="#FFF"/>
+                <TextView
+                    android:id="@+id/resultTileSize"
+                    android:padding="8dp"
+                    android:background="#FFF"/>
+            </TableRow>
+
+            <TableRow android:background="#ccc">
+                <TextView
+                    android:text="Tiles Needed"
+                    android:padding="8dp"
+                    android:background="#FFF"/>
+                <TextView
+                    android:id="@+id/resultTiles"
+                    android:padding="8dp"
+                    android:background="#FFF"/>
+            </TableRow>
+
+            <TableRow android:background="#ccc">
+                <TextView
+                    android:text="Estimated Cost"
+                    android:padding="8dp"
+                    android:background="#FFF"/>
+                <TextView
+                    android:id="@+id/resultCost"
+                    android:padding="8dp"
+                    android:background="#FFF"/>
+            </TableRow>
+        </TableLayout>
+
+        <!-- Download Button -->
+        <Button
+            android:id="@+id/downloadButton"
+            android:text="Download as PDF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="24dp"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

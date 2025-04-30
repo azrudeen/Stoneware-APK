@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_marbles"
+        android:icon="@drawable/ic_marble_svg"
+        android:title="Marbles" />
+
+    <item
+        android:id="@+id/nav_tiles"
+        android:icon="@drawable/ic_tiles_svg"
+        android:title="Tiles" />
+
+    <item
+        android:id="@+id/nav_granite"
+        android:icon="@drawable/ic_granite_svg"
+        android:title="Granite" />
+
+    <item
+        android:id="@+id/nav_italian"
+        android:icon="@drawable/ic_italian_svg"
+        android:title="Italian" />
+
+    <item
+        android:id="@+id/nav_orders"
+        android:icon="@drawable/ic_checkout_svg"
+        android:title="Orders" />
+
+</menu>
