@@ -46,7 +46,7 @@
         android:title="Shop Login"/>
     <item
         android:id="@+id/nav_calculator"
-        android:icon="@drawable/nav_drawer_settings_icon"
+        android:icon="@drawable/ic_calculator"
         android:title="Calculator" />
 
 
