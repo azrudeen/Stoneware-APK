@@ -1,6 +1,5 @@
 package com.example.Stoneware;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,17 +12,20 @@ import java.util.List;
 
 public class TileAdapter extends RecyclerView.Adapter<TileAdapter.TileViewHolder> {
 
-    private Context context;
     private List<TileModel> tileList;
 
-    public TileAdapter(Context context, List<TileModel> tileList) {
-        this.context = context;
+    public TileAdapter(List<TileModel> tileList) {
         this.tileList = tileList;
+    }
+
+    public void updateList(List<TileModel> newList) {
+        tileList = newList;
+        notifyDataSetChanged();
     }
 
     @Override
     public TileViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_tile, parent, false); // tile_item is your card layout XML
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_tile, parent, false);
         return new TileViewHolder(view);
     }
 

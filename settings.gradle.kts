@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Stoneware"
 include(":app")
- 
+

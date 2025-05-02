@@ -35,6 +35,10 @@ public class HomePage extends BaseActivity {
     Handler handler;
     Runnable autoScrollRunnable;
 
+    private androidx.appcompat.widget.SearchView searchView;
+    private TileAdapter tileAdapter;
+    private List<TileModel> fullTileList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +53,7 @@ public class HomePage extends BaseActivity {
         toolbar_menu_icon = findViewById(R.id.toolbar_menu_icon);
         navigationView = findViewById(R.id.navigationView);
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
+        searchView = findViewById(R.id.searchView); // 🛠️ searchView initialization here
 
         // Hero Banner
         setupHeroBanner();
@@ -56,13 +61,16 @@ public class HomePage extends BaseActivity {
         // RecyclerView
         setupRecyclerView();
 
+        // SearchView
+        setupSearchView();
+
         // Filter Buttons
         setupFilterButtons();
 
         // Bottom Navigation
         setupBottomNavigation();
 
-        // 🛠️ Setup Navigation Drawer item clicks
+        // Drawer Navigation
         setupDrawerNavigation();
     }
 
@@ -92,19 +100,45 @@ public class HomePage extends BaseActivity {
     }
 
     private void setupRecyclerView() {
-        List<TileModel> tileList = new ArrayList<>();
-        tileList.add(new TileModel("Marble White", "₹950", R.drawable.pngtree_marble_natural_breccia));
-        tileList.add(new TileModel("Black Granite", "₹650", R.drawable.tiles_image_8));
-        tileList.add(new TileModel("Wood Finish", "₹870", R.drawable.tiles_image_1));
-        tileList.add(new TileModel("Wood Finish", "₹340", R.drawable.sink_images_inart_waterfall_kitchen_sink));
-        tileList.add(new TileModel("Marble White", "₹950", R.drawable.pngtree_marble_natural_breccia));
-        tileList.add(new TileModel("Black Granite", "₹650", R.drawable.tiles_image_8));
-        tileList.add(new TileModel("Wood Finish", "₹870", R.drawable.tiles_image_1));
-        tileList.add(new TileModel("Wood Finish", "₹340", R.drawable.sink_images_inart_waterfall_kitchen_sink));
+        fullTileList = new ArrayList<>();
+        fullTileList.add(new TileModel("Marble White", "₹950", R.drawable.pngtree_marble_natural_breccia));
+        fullTileList.add(new TileModel("Black Granite", "₹650", R.drawable.tiles_image_8));
+        fullTileList.add(new TileModel("Wood Finish", "₹870", R.drawable.tiles_image_1));
+        fullTileList.add(new TileModel("Sink", "₹340", R.drawable.sink_images_inart_waterfall_kitchen_sink));
+        fullTileList.add(new TileModel("Marble White", "₹950", R.drawable.pngtree_marble_natural_breccia));
+        fullTileList.add(new TileModel("Black Granite", "₹650", R.drawable.tiles_image_8));
+        fullTileList.add(new TileModel("Wood Finish", "₹870", R.drawable.tiles_image_1));
+        fullTileList.add(new TileModel("Sink", "₹340", R.drawable.sink_images_inart_waterfall_kitchen_sink));
 
-        TileAdapter tileAdapter = new TileAdapter(this, tileList);
+        tileAdapter = new TileAdapter(fullTileList); // Correct ✅tileAdapter = new TileAdapter(this, fullTileList);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(tileAdapter);
+    }
+
+    private void setupSearchView() {
+        searchView.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                filterTiles(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterTiles(newText);
+                return true;
+            }
+        });
+    }
+
+    private void filterTiles(String text) {
+        List<TileModel> filteredList = new ArrayList<>();
+        for (TileModel item : fullTileList) {
+            if (item.getName().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(item);
+            }
+        }
+        tileAdapter.updateList(filteredList);
     }
 
     private void setupFilterButtons() {
@@ -217,7 +251,7 @@ public class HomePage extends BaseActivity {
                 startActivity(intent);
             }
 
-            drawerLayout.closeDrawers(); // Always close the drawer after clicking
+            drawerLayout.closeDrawers();
             return true;
         });
     }

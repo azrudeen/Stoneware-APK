@@ -7,57 +7,69 @@
     android:layout_height="56dp"
     android:background="#F34B4B"
     android:elevation="4dp"
-    android:paddingStart="8dp"
-    android:paddingEnd="8dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <!-- Menu Button -->
-    <ImageButton
-        android:id="@+id/toolbar_menu_icon"
-        android:layout_width="60dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/transparent"
-        android:scaleType="centerInside"
-        android:src="@drawable/toolbar_menu_icon"
-        android:contentDescription="Menu"/>
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
 
-    <!-- Home Button -->
-    <ImageButton
-        android:id="@+id/Home_icon"
-        android:layout_width="130dp"
-        android:layout_height="match_parent"
-        android:layout_marginStart="20dp"
-        android:background="@android:color/transparent"
-        android:scaleType="centerInside"
-        android:src="@drawable/stoneware_logo"
-        android:contentDescription="Home"/>
+        <!-- Menu Button -->
+        <ImageButton
+            android:id="@+id/toolbar_menu_icon"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/toolbar_menu_icon"
+            android:contentDescription="Menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-    <!-- Spacer View to push icons to the end -->
-    <View
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        <!-- Logo -->
+        <ImageButton
+            android:id="@+id/Home_icon"
+            android:layout_width="150dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Home"
+            android:scaleType="fitCenter"
+            android:src="@drawable/stoneware_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/toolbar_menu_icon"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Search Button -->
-    <ImageButton
-        android:id="@+id/search_bar"
-        android:layout_width="40dp"
-        android:layout_height="match_parent"
-        android:layout_marginStart="80dp"
-        android:background="@android:color/transparent"
-        android:scaleType="centerInside"
-        app:srcCompat="@drawable/ic_search_2"
-        android:contentDescription="Search"/>
+        <!-- Search Bar -->
+        <!-- Search View -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="20dp"
+            android:queryHint="Search tiles, sinks..."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/Account_icon"
+            app:layout_constraintStart_toEndOf="@id/Home_icon"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Account Button -->
-    <ImageButton
-        android:id="@+id/Account_icon"
-        android:layout_width="40dp"
-        android:layout_height="match_parent"
-        android:layout_marginStart="20dp"
-        android:background="@android:color/transparent"
-        android:scaleType="centerInside"
-        app:srcCompat="@drawable/account"
-        android:contentDescription="Account"/>
+
+        <!-- Account Button -->
+        <ImageButton
+            android:id="@+id/Account_icon"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:contentDescription="Account"
+            app:srcCompat="@drawable/account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.appcompat.widget.Toolbar>

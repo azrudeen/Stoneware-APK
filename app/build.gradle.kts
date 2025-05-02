@@ -3,6 +3,7 @@ plugins {
     id("com.google.gms.google-services")
 }
 
+
 android {
     namespace = "com.example.Stoneware"
     compileSdk = 35
@@ -30,7 +31,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
 }
+
 
 dependencies {
 
@@ -43,6 +46,8 @@ dependencies {
     implementation("com.google.firebase:firebase-database:21.0.0") //FireBase Database
     implementation("com.google.android.material:material:1.12.0") // or latest
     implementation("com.itextpdf:itext7-core:7.1.15")// Or use Android-specific iText or PdfDocument
+    implementation("com.google.ar:core:1.39.0")//AR- dependencies.
+    implementation("com.gorisse.thomas.sceneform:sceneform:1.21.0") // Java-based Scene form fork
 
     testImplementation("junit:junit:4.13.2")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:2.1.0")
