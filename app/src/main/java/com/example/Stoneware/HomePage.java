@@ -27,7 +27,7 @@ import java.util.List;
 public class HomePage extends BaseActivity {
 
     DrawerLayout drawerLayout;
-    ImageButton toolbar_menu_icon;
+    ImageButton toolbar_menu_icon, searchButton;
     NavigationView navigationView;
     ViewPager2 viewPager;
     RecyclerView recyclerView;
@@ -38,6 +38,7 @@ public class HomePage extends BaseActivity {
     private androidx.appcompat.widget.SearchView searchView;
     private TileAdapter tileAdapter;
     private List<TileModel> fullTileList;
+    private List<TileModel> filteredList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,7 @@ public class HomePage extends BaseActivity {
         toolbar_menu_icon = findViewById(R.id.toolbar_menu_icon);
         navigationView = findViewById(R.id.navigationView);
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
-        searchView = findViewById(R.id.searchView); // 🛠️ searchView initialization here
+        searchButton = findViewById(R.id.search_button); // Button to toggle SearchView visibility
 
         // Hero Banner
         setupHeroBanner();
@@ -110,29 +111,51 @@ public class HomePage extends BaseActivity {
         fullTileList.add(new TileModel("Wood Finish", "₹870", R.drawable.tiles_image_1));
         fullTileList.add(new TileModel("Sink", "₹340", R.drawable.sink_images_inart_waterfall_kitchen_sink));
 
-        tileAdapter = new TileAdapter(fullTileList); // Correct ✅tileAdapter = new TileAdapter(this, fullTileList);
+        tileAdapter = new TileAdapter(fullTileList);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(tileAdapter);
+        recyclerView.setHasFixedSize(true);
     }
 
     private void setupSearchView() {
+        searchView = findViewById(R.id.search_view); // This ID corresponds to the SearchView in your layout
+        searchView.setVisibility(View.GONE); // Initially hide the SearchView
+
+        // Set up search query listener
         searchView.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                filterTiles(query);
+                filterTiles(query); // Call your filter function
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                filterTiles(newText);
+                filterTiles(newText); // Filter as the user types
                 return true;
+            }
+        });
+
+        // Toggle SearchView visibility when the search button is clicked
+        searchButton.setOnClickListener(view -> {
+            if (searchView.getVisibility() == View.VISIBLE) {
+                searchView.setVisibility(View.GONE);
+                // Reset to the full list when search is closed
+                resetRecyclerView();
+            } else {
+                searchView.setVisibility(View.VISIBLE);
+                searchView.setIconified(false); // Expand SearchView immediately
             }
         });
     }
 
+    private void resetRecyclerView() {
+        // Reset the adapter data to the full list of tiles
+        tileAdapter.updateList(fullTileList);  // Assuming you have the original list saved in fullTileList
+    }
+
     private void filterTiles(String text) {
-        List<TileModel> filteredList = new ArrayList<>();
+        filteredList = new ArrayList<>();
         for (TileModel item : fullTileList) {
             if (item.getName().toLowerCase().contains(text.toLowerCase())) {
                 filteredList.add(item);

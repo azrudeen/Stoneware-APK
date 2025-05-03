@@ -1,6 +1,9 @@
 package com.example.Stoneware;
 
-public class TileModel {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class TileModel implements Parcelable {
     private String name;
     private String price;
     private int imageResId;
@@ -10,6 +13,24 @@ public class TileModel {
         this.price = price;
         this.imageResId = imageResId;
     }
+
+    protected TileModel(Parcel in) {
+        name = in.readString();
+        price = in.readString();
+        imageResId = in.readInt();
+    }
+
+    public static final Creator<TileModel> CREATOR = new Creator<TileModel>() {
+        @Override
+        public TileModel createFromParcel(Parcel in) {
+            return new TileModel(in);
+        }
+
+        @Override
+        public TileModel[] newArray(int size) {
+            return new TileModel[size];
+        }
+    };
 
     public String getName() {
         return name;
@@ -21,5 +42,17 @@ public class TileModel {
 
     public int getImageResId() {
         return imageResId;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(price);
+        dest.writeInt(imageResId);
     }
 }
