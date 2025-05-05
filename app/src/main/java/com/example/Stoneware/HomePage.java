@@ -111,28 +111,40 @@ public class HomePage extends BaseActivity {
         fullTileList.add(new TileModel("Wood Finish", "₹870", R.drawable.tiles_image_1));
         fullTileList.add(new TileModel("Sink", "₹340", R.drawable.sink_images_inart_waterfall_kitchen_sink));
 
-        tileAdapter = new TileAdapter(fullTileList);
+        tileAdapter = new TileAdapter(this, fullTileList);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(tileAdapter);
         recyclerView.setHasFixedSize(true);
     }
 
     private void setupSearchView() {
-        searchView = findViewById(R.id.search_view); // This ID corresponds to the SearchView in your layout
-        searchView.setVisibility(View.GONE); // Initially hide the SearchView
+        searchView = findViewById(R.id.search_view);
+        searchView.setVisibility(View.GONE);
 
         // Set up search query listener
         searchView.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                filterTiles(query); // Call your filter function
+                filterTiles(query);
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                filterTiles(newText); // Filter as the user types
+                filterTiles(newText);
                 return true;
+            }
+        });
+
+        // Set up close listener
+        searchView.setOnCloseListener(new androidx.appcompat.widget.SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                // Reset the RecyclerView to the full list
+                resetRecyclerView();
+                // Hide the SearchView
+                searchView.setVisibility(View.GONE);
+                return true; // Return true to indicate that we handled the close action
             }
         });
 
@@ -140,11 +152,10 @@ public class HomePage extends BaseActivity {
         searchButton.setOnClickListener(view -> {
             if (searchView.getVisibility() == View.VISIBLE) {
                 searchView.setVisibility(View.GONE);
-                // Reset to the full list when search is closed
-                resetRecyclerView();
+                resetRecyclerView(); // Reset to full list when hiding
             } else {
                 searchView.setVisibility(View.VISIBLE);
-                searchView.setIconified(false); // Expand SearchView immediately
+                searchView.setIconified(false);
             }
         });
     }
