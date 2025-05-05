@@ -1,15 +1,14 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#F9F9F9">
+    android:fillViewport="true">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <!-- CardView for product -->
         <androidx.cardview.widget.CardView
@@ -17,50 +16,50 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="6dp"
-            android:background="@android:color/white">
+            app:cardBackgroundColor="#FAFAFA">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:orientation="vertical">
 
                 <!-- Product Image -->
                 <ImageView
                     android:id="@+id/productImage"
                     android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:scaleType="centerCrop"
-                    android:background="@drawable/image_rounded_corners"
-                    android:contentDescription="Product Image"
-                    android:adjustViewBounds="true" />
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                 <!-- Product Title -->
                 <TextView
                     android:id="@+id/productTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Black Granite"
-                    android:textSize="22sp"
+                    android:textSize="24sp"
                     android:textStyle="bold"
-                    android:textColor="#212121" />
+                    android:layout_marginTop="8dp" />
 
                 <!-- Product Price -->
                 <TextView
                     android:id="@+id/productPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="₹650"
-                    android:textColor="#E91E63"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textColor="#FF5722" />
 
                 <!-- Description Label -->
                 <TextView
+                    android:id="@+id/productDescriptionLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Description"
@@ -77,6 +76,7 @@
                     android:text="This is a beautiful product: Black Granite. High quality and durable!"
                     android:textSize="14sp"
                     android:textColor="#666" />
+            </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -142,7 +142,7 @@
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
                 android:text="ADD TO CART"
-                android:backgroundTint="#FFA000"
+                android:backgroundTint="@color/pepperRed"
                 android:textColor="@android:color/white" />
 
             <Button
@@ -154,5 +154,21 @@
                 android:backgroundTint="#D81B60"
                 android:textColor="@android:color/white" />
         </LinearLayout>
+
+        <!-- Related items RecyclerView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Related Items"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/relatedRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"/>
     </LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
